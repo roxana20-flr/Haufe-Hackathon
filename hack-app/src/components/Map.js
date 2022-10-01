@@ -1,12 +1,18 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { Icon } from 'leaflet';
 // Don't forget to import Map.css, or else your map will not appear!
 import './Map.css';
 
+
+
 const Haufe = [45.75951, 21.220871];
 
-function Map() {
+const Map = ({  data }) => {
+  console.log("Data")
+  console.log(data)
+  const datas = data;
+
   return (
     <MapContainer 
       center={Haufe} 
